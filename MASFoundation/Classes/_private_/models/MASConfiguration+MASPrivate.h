@@ -49,7 +49,7 @@
 @property (nonatomic, copy, readonly) NSString *userInfoEndpointPath;
 @property (nonatomic, copy, readonly) NSString *userSessionLogoutEndpointPath;
 @property (nonatomic, copy, readonly) NSString *userSessionStatusEndpointPath;
-
+@property (nonatomic, copy, readonly) NSString *authenticateOTPEndpointPath;
 
 
 ///--------------------------------------

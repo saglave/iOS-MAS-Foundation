@@ -108,6 +108,7 @@ static NSString *const MASTokenRevokeEndpoint = @"token_revocation_endpoint_path
 static NSString *const MASUserInfoEndpoint = @"userinfo_endpoint_path"; // string
 static NSString *const MASUserSessionLogoutEndpoint = @"usersession_logout_endpoint_path"; // string
 static NSString *const MASUserSessionStatusEndpoint = @"usersession_status_endpoint_path"; // string
+static NSString *const MASAuthenticateOTPEndpoint = @"authenticate_otp_endpoint_path"; // string
 
 static NSString *const MASUsersLDAPEndpoint = @"users_ldap_endpoint_path"; // string
 static NSString *const MASUserGroupsLDAPEndpoint = @"user_groups_ldap_endpoint_path"; // string
@@ -666,6 +667,11 @@ static float _systemVersionNumber_;
     return _endpointKeysToPaths_[MASUserSessionStatusEndpoint];
 }
 
+- (NSString *)authenticateOTPEndpointPath
+{
+    return _endpointKeysToPaths_[MASAuthenticateOTPEndpoint];
+}
+
 
 # pragma mark - Bluetooth Properties
 
@@ -832,6 +838,7 @@ static float _systemVersionNumber_;
     [validationRules addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"oauth.system_endpoints.token_endpoint_path", @"keyPath", [NSString class], @"classType", nil]];
     [validationRules addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"oauth.system_endpoints.token_endpoint_path", @"keyPath", [NSString class], @"classType", nil]];
     [validationRules addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"oauth.system_endpoints.usersession_logout_endpoint_path", @"keyPath", [NSString class], @"classType", nil]];
+    [validationRules addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"oauth.system_endpoints.authenticate_otp_endpoint_path", @"keyPath", [NSString class], @"classType", nil]];
     
     //  MAG system endpoint
     [validationRules addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"mag.system_endpoints.device_remove_endpoint_path", @"keyPath", [NSString class], @"classType", nil]];
